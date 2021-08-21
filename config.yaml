@@ -1,10 +1,15 @@
-baseurl: /
+baseurl: "https://manboha.github.io/mblog/"
+publishDir: "docs"
 title: Mblog for Data Analysis
 languageCode: en-us
 paginate: '10'
 theme: Mainroad
 disqusShortname: ''
 googleAnalytics: ''
+
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+enableEmoji: true
+
 Author:
   avatar: img/avatar.png
   bio: 

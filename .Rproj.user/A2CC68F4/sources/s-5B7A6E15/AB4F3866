@@ -3,7 +3,7 @@
     "path": "D:/Dropbox/MyStudy/data_science/mblog/config.yaml",
     "project_path": "config.yaml",
     "type": "yaml",
-    "hash": "2202807210",
+    "hash": "2192047201",
     "contents": "",
     "dirty": false,
     "created": 1629549100911.0,
@@ -14,11 +14,11 @@
         "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 1629549558,
+    "lastKnownWriteTime": 1629552877,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1629549558587,
+    "last_content_update": 1629552877108,
     "read_only": false,
     "read_only_alternatives": []
 }
