@@ -10,10 +10,29 @@ googleAnalytics: ''
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 enableEmoji: true
 
+menu:
+  menu.main:
+    identifier: "nist"
+    name: "NIST website"
+    url: "https://www.nist.gov/"
+    weight: 1
+  menu.main:
+    identifier: "web"
+    name: "Website Github"
+    url: "https://github.com/usnistgov/hugo-uswds-docs"
+    weight: 2
+  menu.main:
+    identifier: "web1"
+    name: "Theme Github"
+    url: "https://github.com/usnistgov/hugo-uswds"
+    parent: "web"
+    weight: 1
+
 Author:
   avatar: img/avatar.png
   bio: 
   name: Bohak Maeng
+
 Params:
   authorbox: no
   description: 
@@ -38,3 +57,8 @@ Params:
   widgets:
     recent_num: 5
     tags_counter: no
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

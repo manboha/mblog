@@ -16,6 +16,12 @@ We&rsquo;ll start with creating a new site with a very basic template." />
 <meta property="article:modified_time" content="2014-09-28T00:00:00+00:00" />
 
 
+		<meta itemprop="name" content="Creating a New Theme">
+<meta itemprop="description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
+We&rsquo;ll start with creating a new site with a very basic template."><meta itemprop="datePublished" content="2014-09-28T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-09-28T00:00:00+00:00" />
+<meta itemprop="wordCount" content="7233">
+<meta itemprop="keywords" content="" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -46,6 +52,20 @@ We&rsquo;ll start with creating a new site with a very basic template." />
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
 	</button>
 	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/mblog/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://manboha.github.io/rbasic/">
+				
+				<span class="menu__text">R Basic</span>
+				
+			</a>
+		</li>
 		<li class="menu__item">
 			<a class="menu__link" href="/mblog/post/migrate-from-jekyll/">
 				
@@ -86,10 +106,77 @@ We&rsquo;ll start with creating a new site with a very basic template." />
 	<article class="post">
 		<header class="post__header">
 			<h1 class="post__title">Creating a New Theme</h1>
-			<div class="post__meta meta">
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Bohak Maeng</span>
+</div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2014-09-28T00:00:00Z">September 28, 2014</time></div></div>
-		</header><div class="content post__content clearfix">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2014-09-28T00:00:00Z">2014-09-28</time></div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#some-definitions">Some Definitions</a>
+      <ul>
+        <li><a href="#skins">Skins</a></li>
+        <li><a href="#the-home-page">The Home Page</a></li>
+        <li><a href="#site-configuration-file">Site Configuration File</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#template-files">Template Files</a></li>
+      </ul>
+    </li>
+    <li><a href="#create-a-new-site">Create a New Site</a>
+      <ul>
+        <li><a href="#generate-the-html-for-the-new-site">Generate the HTML For the New Site</a></li>
+        <li><a href="#test-the-new-site">Test the New Site</a></li>
+      </ul>
+    </li>
+    <li><a href="#create-a-new-theme">Create a New Theme</a>
+      <ul>
+        <li><a href="#create-a-skeleton">Create a Skeleton</a></li>
+        <li><a href="#update-the-configuration-file-to-use-the-theme">Update the Configuration File to Use the Theme</a></li>
+        <li><a href="#generate-the-site">Generate the Site</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-theme-development-cycle">The Theme Development Cycle</a>
+      <ul>
+        <li><a href="#purge-the-public-directory">Purge the public/ Directory</a></li>
+        <li><a href="#hugos-watch-option">Hugo&rsquo;s Watch Option</a></li>
+        <li><a href="#live-reload">Live Reload</a></li>
+        <li><a href="#development-commands">Development Commands</a></li>
+      </ul>
+    </li>
+    <li><a href="#update-the-home-page-template">Update the Home Page Template</a>
+      <ul>
+        <li><a href="#make-a-static-home-page">Make a Static Home Page</a></li>
+        <li><a href="#build-a-dynamic-home-page">Build a &ldquo;Dynamic&rdquo; Home Page</a></li>
+        <li><a href="#list-and-single-templates">List and Single Templates</a></li>
+        <li><a href="#add-content-to-the-homepage">Add Content to the Homepage</a></li>
+        <li><a href="#add-content-to-the-posts">Add Content to the Posts</a></li>
+        <li><a href="#linking-to-content">Linking to Content</a></li>
+        <li><a href="#create-a-post-listing">Create a Post Listing</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-top-level-pages">Creating Top Level Pages</a></li>
+    <li><a href="#sharing-templates">Sharing Templates</a>
+      <ul>
+        <li><a href="#create-the-header-and-footer-partials">Create the Header and Footer Partials</a></li>
+        <li><a href="#update-the-home-page-template-to-use-the-partials">Update the Home Page Template to Use the Partials</a></li>
+        <li><a href="#update-the-default-single-template-to-use-the-partials">Update the Default Single Template to Use the Partials</a></li>
+      </ul>
+    </li>
+    <li><a href="#add-date-published-to-posts">Add “Date Published” to Posts</a>
+      <ul>
+        <li><a href="#add-date-published-to-the-template">Add “Date Published” to the Template</a></li>
+        <li><a href="#dont-repeat-yourself">Don&rsquo;t Repeat Yourself</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
 			<h2 id="introduction">Introduction</h2>
 <p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.</p>
 <p>We&rsquo;ll start with creating a new site with a very basic template. Then we&rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.</p>
@@ -910,9 +997,9 @@ $ vi themes/zafta/layouts/_default/single.html
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/mblog/post/basic-elements/" rel="next">
+		<a class="pager__link" href="/mblog/post/migrate-from-jekyll/" rel="next">
 			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Basic HTML Elements</p>
+			<p class="pager__title">Migrate to Hugo from Jekyll</p>
 		</a>
 	</div>
 </nav>
@@ -932,11 +1019,11 @@ $ vi themes/zafta/layouts/_default/single.html
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/mblog/post/2021-08-21-haha/">haha</a></li>
 			<li class="widget__item"><a class="widget__link" href="/mblog/post/2020-12-01-r-rmarkdown/">Hello R Markdown</a></li>
 			<li class="widget__item"><a class="widget__link" href="/mblog/post/basic-elements/">Basic HTML Elements</a></li>
+			<li class="widget__item"><a class="widget__link" href="/mblog/post/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a></li>
 			<li class="widget__item"><a class="widget__link" href="/mblog/post/creating-a-new-theme/">Creating a New Theme</a></li>
-			<li class="widget__item"><a class="widget__link" href="/mblog/post/goisforlovers/">(Hu)go Template Primer</a></li>
-			<li class="widget__item"><a class="widget__link" href="/mblog/post/hugoisforlovers/">Getting Started with Hugo</a></li>
 		</ul>
 	</div>
 </div>
@@ -976,12 +1063,14 @@ $ vi themes/zafta/layouts/_default/single.html
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2021 Mblog for Data Analysis.
+			&copy; 2021 Bohak Maeng.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
 <script async defer src="/mblog/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 </body>
 </html>

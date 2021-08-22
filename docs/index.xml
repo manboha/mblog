@@ -5,88 +5,28 @@
     <link>https://manboha.github.io/mblog/</link>
     <description>Recent content on Mblog for Data Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://manboha.github.io/mblog/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko</language>
+    <lastBuildDate>Sun, 22 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://manboha.github.io/mblog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello R Markdown</title>
-      <link>https://manboha.github.io/mblog/post/2020-12-01-r-rmarkdown/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      
-      <guid>https://manboha.github.io/mblog/post/2020-12-01-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
-    </item>
-    
-    <item>
-      <title>Basic HTML Elements</title>
-      <link>https://manboha.github.io/mblog/post/basic-elements/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://manboha.github.io/mblog/post/basic-elements/</guid>
-      <description>&lt;p&gt;The main purpose of this article is to make sure that all basic HTML Elements are decorated with CSS so as to not miss any possible elements when creating new themes for Hugo.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>https://manboha.github.io/mblog/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://manboha.github.io/mblog/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>About Hugo</title>
+      <title>About</title>
       <link>https://manboha.github.io/mblog/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://manboha.github.io/mblog/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.
-Setup Some fun facts about Hugo:
- Built in Go Loosely inspired by Jekyll Primarily developed by spf13 on the train while commuting to and from Manhattan. Coded in Vim using spf13-vim  Have questions or suggestions?</description>
+      <description>R을 이용한 데이터 분석을 스스로 공부하고 공유하기 위한 곳입니다.
+데이터 분석에 관심이 있는 분들에게 도움이 되길 바랍니다.
+감사합니다~~</description>
     </item>
     
     <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://manboha.github.io/mblog/post/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>RStudio Addin을 만드는 방법</title>
+      <link>https://manboha.github.io/mblog/post/2021-08-22-rstudio-addin/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://manboha.github.io/mblog/post/goisforlovers/</guid>
-      <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for
-its template engine. It is an extremely lightweight engine that provides a very
-small amount of logic. In our experience that it is just the right amount of
-logic to be able to create a good static website. If you have used other
-template systems from different languages or frameworks you will find a lot of
-similarities in Go templates.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://manboha.github.io/mblog/post/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://manboha.github.io/mblog/post/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>https://manboha.github.io/mblog/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://manboha.github.io/mblog/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <guid>https://manboha.github.io/mblog/post/2021-08-22-rstudio-addin/</guid>
+      <description>RStudio의 Addin은 상황에 따라 편리함을 제공해줍니다. 자주 쓰는 함수를 만들고 이를 메뉴에 등록하여 사용하면 시간과 노력이 덜 들게 됩니다.
+RStudio에 Addin을 만드는 방법은 R 패키지를 만들고, 이 패키지의 함수를 ’addins.dcf’에 입력하면 됩니다. 그 다음에 패키지를 설치하면 자동으로 Addin으로 등록됩니다.
+R 패키지와 R 함수 만들기addins.dcf 파일에 입력하기패키지 설치하기R 패키지와 R 함수 만들기RStudio를 실행하고 [File]-[New Project]-[New Directory]-[R Package]를 클릭합니다. 패키지를 만드는 창에서 패키지 이름과 프로젝트가 위치할 폴더를 지정하고 [Create Project]를 클릭합니다.</description>
     </item>
     
   </channel>

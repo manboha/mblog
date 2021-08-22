@@ -13,6 +13,8 @@
 <meta property="og:url" content="https://manboha.github.io/mblog/categories/r/" />
 
 
+		<meta itemprop="name" content="R">
+<meta itemprop="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -45,30 +47,23 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/mblog/post/migrate-from-jekyll/">
+			<a class="menu__link" href="/mblog/">
 				
-				<span class="menu__text">Jekyll migration</span>
+				<span class="menu__text">Home</span>
 				
 			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/mblog/post/goisforlovers/">
+			<a class="menu__link" href="https://manboha.github.io/rbasic/">
 				
-				<span class="menu__text">(Hu)go Template Primer</span>
+				<span class="menu__text">Data Analysis Note</span>
 				
 			</a>
 		</li>
 		<li class="menu__item">
 			<a class="menu__link" href="/mblog/about/">
 				
-				<span class="menu__text">About Hugo</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/mblog/post/hugoisforlovers/">
-				
-				<span class="menu__text">Getting Started with Hugo</span>
+				<span class="menu__text">About</span>
 				
 			</a>
 		</li>
@@ -86,20 +81,22 @@
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/mblog/post/2020-12-01-r-rmarkdown/" rel="bookmark">
-			Hello R Markdown
+			<a href="/mblog/post/2021-08-22-rstudio-addin/" rel="bookmark">
+			RStudio Addin을 만드는 방법
 			</a>
 		</h2>
-		<div class="list__meta meta">
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Bohak Maeng</span>
+</div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-12-01T21:13:14-05:00">December 01, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/mblog/categories/r/" rel="category">R</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-08-22T00:00:00Z">2021-08-22</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/mblog/categories/r/" rel="category">R</a>
 	</span>
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.
+		RStudio의 Addin은 상황에 따라 편리함을 제공해줍니다. 자주 쓰는 함수를 만들고 이를 메뉴에 등록하여 사용하면 시간과 노력이 덜 들게 됩니다.
+RStudio에 Addin을 만드는 방법은 R 패키지를 만들고, 이 패키지의 함수를 ’addins.dcf’에 입력하면 됩니다. 그 다음에 패키지를 설치하면 자동으로 Addin으로 등록됩니다.
+R 패키지와 R 함수 만들기addins.dcf 파일에 입력하기패키지 설치하기R 패키지와 R 함수 만들기RStudio를 실행하고 [File]-[New Project]-[New Directory]-[R Package]를 클릭합니다. 패키지를 만드는 창에서 패키지 이름과 프로젝트가 위치할 폴더를 지정하고 [Create Project]를 클릭합니다.
 	</div>
 </article>
 </main>
@@ -107,7 +104,7 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 
 			</div>
 			
-<aside class="sidebar"><div class="widget-search widget">
+<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
 			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
@@ -120,11 +117,7 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/mblog/post/2020-12-01-r-rmarkdown/">Hello R Markdown</a></li>
-			<li class="widget__item"><a class="widget__link" href="/mblog/post/basic-elements/">Basic HTML Elements</a></li>
-			<li class="widget__item"><a class="widget__link" href="/mblog/post/creating-a-new-theme/">Creating a New Theme</a></li>
-			<li class="widget__item"><a class="widget__link" href="/mblog/post/goisforlovers/">(Hu)go Template Primer</a></li>
-			<li class="widget__item"><a class="widget__link" href="/mblog/post/hugoisforlovers/">Getting Started with Hugo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/mblog/post/2021-08-22-rstudio-addin/">RStudio Addin을 만드는 방법</a></li>
 		</ul>
 	</div>
 </div>
@@ -133,10 +126,6 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/mblog/categories/development/">Development</a></li>
-			<li class="widget__item">
-				<a class="widget__link" href="/mblog/categories/golang/">golang</a></li>
-			<li class="widget__item">
 				<a class="widget__link" href="/mblog/categories/r/">R</a></li>
 		</ul>
 	</div>
@@ -144,18 +133,8 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/basic-elements/" title="Basic Elements">Basic Elements</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/css/" title="CSS">CSS</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/development/" title="development">development</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/go/" title="go">go</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/golang/" title="golang">golang</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/html/" title="HTML">HTML</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/hugo/" title="hugo">hugo</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/plot/" title="plot">plot</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/r-markdown/" title="R Markdown">R Markdown</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/regression/" title="regression">regression</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/templates/" title="templates">templates</a>
-		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/themes/" title="themes">themes</a>
+		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/addin/" title="Addin">Addin</a>
+		<a class="widget-taglist__link widget__link btn" href="/mblog/tags/rstudio/" title="RStudio">RStudio</a>
 	</div>
 </div>
 </aside>
@@ -164,7 +143,7 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2021 Mblog for Data Analysis.
+			&copy; 2021 Bohak Maeng.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

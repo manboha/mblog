@@ -1,32 +1,14 @@
 ---
-authorbox: false
-date: "2014-04-09"
-menu: main
-sidebar: false
-title: About Hugo
+date: "2021-08-22"
+menu:
+  main:
+    name: About
+    weight: 10
+title: About 
 ---
 
-Hugo is a static site engine written in Go.
+R을 이용한 데이터 분석을 스스로 공부하고 공유하기 위한 곳입니다.
 
+데이터 분석에 관심이 있는 분들에게 도움이 되길 바랍니다.
 
-It makes use of a variety of open source projects including:
-
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
-
-Learn more and contribute on [GitHub](https://github.com/spf13).
-
-## Setup
-
-Some fun facts about [Hugo](http://gohugo.io/):
-
-* Built in [Go](http://golang.org/)
-* Loosely inspired by [Jekyll](http://jekyllrb.com/)
-* Primarily developed by [spf13](http://spf13.com/) on the train while commuting to and from Manhattan.
-* Coded in [Vim](http://vim.org) using [spf13-vim](http://vim.spf13.com/)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/spf13/hugo/issues/new) or [ask me on Twitter](https://twitter.com/spf13).
-
-Thanks for reading!
+감사합니다~~
