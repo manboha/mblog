@@ -23,9 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## 1.2 의사결정나무 구성요소
 
-```{r, layout="l-body-outset", fig.width=5, fig.height=1.5}
-knitr::include_graphics("image1.png")
-```
+![](Image1.png){width="600"}
 
 ## 1.3 의사결정나무 예제
 
@@ -35,9 +33,8 @@ knitr::include_graphics("image1.png")
 * 데이터 : 대출 신청자의 인구통계자료, 사회경제 프로파일(수입, 채무, 신용기록 등)
 * 결과 : 대출신청자의 Risk 제공(저위험, 중위험, 고위험)
 
-```{r, layout="l-body-outset", fig.width=5, fig.height=1.5}
-knitr::include_graphics("image2.png")
-```
+![](Image2.png){width="600"}
+
 
 ### 기상정보로 경기 여부 예측
 
@@ -47,9 +44,8 @@ knitr::include_graphics("image2.png")
 * 예측 : (날씨 = 비, 습기 = 높음, 바람 = 약함) 일 때, 경기여부 = ?
 * 예측결과 : 경기 Yes
 
-```{r, layout="l-body-outset", fig.width=5, fig.height=1.5}
-knitr::include_graphics("image3.png")
-```
+![](Image3.png){width="600"}
+
 
 ## 1.4 의사결정나무 모형 구축과정
 
